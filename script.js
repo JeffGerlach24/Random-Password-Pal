@@ -14,22 +14,6 @@ const randomFunc = {
     symbol: getRandomSymbol
 }
 
-clipboard.addEventListener('click', () => {
-    const textarea = document.createElement('textarea');
-    const password = resultEl.innerText;
-
-    if(!password) {
-        return;
-    }
-
-    textarea.value = password;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand('copy');
-    textarea.remove();
-    alert('Password Copied to Clipboard');
-});
-
 generateEl.addEventListener('click', () => {
     const length = +lengthEl.value;
     const hasLower = lowercaseEL.checked;
@@ -37,7 +21,7 @@ generateEl.addEventListener('click', () => {
     const hasNumber = numberEl.checked;
     const hasSymbol = symbolsEl.checked;
 
-    resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+    resultEl.innerText = generatePassword (hasLower, hasUpper, hasNumber, hasSymbol, length);
 });
 
 function generatePassword(lower, upper, number, symbol, length) {
