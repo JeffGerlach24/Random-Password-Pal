@@ -2,7 +2,15 @@
   box-sizing: border-box;
 }
 
+header {
+  font-size: 24px;
+  text-align: center;
+}
 
+.container-header {
+  font-size: 20px;
+  text-align: center;
+} 
 body {
   font-family: sans-serif;
   background-color: #ad43eb;
@@ -37,4 +45,11 @@ input[type=checkbox] {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  font-size: 16px;
+  letter-spacing: 1px;
+  position: relative;
+  padding: 15px 12.5px;
+  height: 50px;
+  width: 100%;
+  border-radius: 12.5px;
 }
