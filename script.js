@@ -1,17 +1,34 @@
-// Assignment code here
+const resultEl = document.getElementById('result');
+const lengthEl = document.getElementById('length');
+const uppercaseEL = document.getElementById('uppercase');
+const lowercaseEL = document.getElementById('lowercase');
+const numberEl = document.getElementById('numbers');
+const symbolsEl = document.getElementById('symbols');
+const generateEl = document.getElementById('generate');
+const clipboardEl = document.getElementById('clipboard');
 
 
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+
+
+
+
+
+function getRandomLower() {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+function getRandomUpper() {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+
+function getRandomNumber() {
+    return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+}
+
+function getRandomSymbol() {
+    const symbols ='!?@#$%^&*(){}[]+<>?/;:,';
+    return symbols.[Math.floor(Math.random() * symbols.length)];
+}
