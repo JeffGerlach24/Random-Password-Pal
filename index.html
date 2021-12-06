@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <section class="capsule">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      
+      <main class="container">
+        <div class="container-header">
+          <h2>Generate a Password</h2>
+          <div class="result-container">
+            <span id="result"></span>
+            <button class="clpbrd" id="clipbord">
+              <i class="fas fa-clipboard"></i>
+            </button>
+          </div>
+        </div>
+       
+        <div class="container-body">
+          <div class="settings">
+            
+            <div class="setting">
+              <label>Password length (Max:24)</label>
+              <input type="number" id="length" min="8" max="24" value="24"/>
+            </div>
+          
+          <div class="setting">
+            <label>Include uppercase letters:</label>
+            <input type="checkbox" id="uppercase" checked class="toggle"/>
+          </div>
+
+          <div class="setting">
+            <label>Include lowercase letters</label>
+            <input type="checkbox" id="lowercase" checked class="toggle"/>
+          </div>
+
+          <div class="setting">
+            <label>Include numbers</label>
+            <input type="checkbox" id="numbers" checked class="toggle"/>
+          </div>
+
+          <div class="setting">
+            <label>Include symbols</label>
+            <input type="checkbox" id="symbols" checked class="toggle"/>
+          </div>
+        </div>
+        </div>
+        
+        <div class="container-footer">
+          <button id="generate" class="btn">Generate Password</button>
+        </div>
+      </main>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
