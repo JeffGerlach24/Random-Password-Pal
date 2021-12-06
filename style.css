@@ -53,3 +53,18 @@ input[type=checkbox] {
   width: 100%;
   border-radius: 12.5px;
 }
+
+.result-container #result {
+  word-wrap: break-word;
+  max-width: calc(100% - 30%);
+  color: aqua;
+}
+
+.result-container .clpbrd {
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 30px;
+  width: 30px;
+}
